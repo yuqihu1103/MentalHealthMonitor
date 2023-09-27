@@ -1,0 +1,49 @@
+/*styling of the navbar*/
+.navbar-nav {
+    margin-left: auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background-color: #e3bb37;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a.navbar-brand{
+    font-family: 'Caveat', cursive;
+    font-family: 'Fuggles', cursive;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.navbar-brand img {
+    margin-right: 8px;
+  }
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4caf50;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+}

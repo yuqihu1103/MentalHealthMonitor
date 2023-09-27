@@ -1,0 +1,47 @@
+Project Description:
+
+Project Overview:
+The Mental Health Monitor is a web-based application designed to help users assess and track their mental 
+health over time. It provides users with the ability to register, log in, and take various mental health 
+assessment tests. Users can view their test results, track changes over time, and gain insights into their 
+mental well-being. The application also offers user privacy, data security, and a seamless user experience.
+
+Technologies Used:
+    Backend: Node.js and Express.js for server-side development.
+    Database: MongoDB for storing user accounts and test results.
+    Frontend: HTML for structuring the web pages. Modular CSS for a clean and organized styling approach. 
+              Vanilla JavaScript for client-side rendering and dynamic updates.
+
+Key Features:
+
+    User Registration and Authentication:
+        Users can create an account with a unique username and password.
+        Authentication ensures secure access to personal test data.
+
+    Mental Health Assessment Tests:
+        Users can choose from a selection of mental health assessment tests (e.g., depression, anxiety).
+        The application provides a user-friendly interface for taking and submitting test responses.
+
+    Test Results History:
+        Users can view a history of their past test results, including scores and test dates.
+        The results history serves as a visual representation of the user's mental health progress.
+
+    Filtering and Insights:
+        Users can filter and sort their test results based on criteria such as test type and date.
+        Insights and trends may be provided to help users understand their mental health journey better.
+
+    Client-Side Rendering:
+        The frontend of the application is designed for client-side rendering using vanilla JavaScript.
+        This ensures a responsive and interactive user interface without full page reloads.
+
+    Data Security:
+        User data, including test results, is securely stored in a MongoDB database.
+        Sensitive information is encrypted, and best practices for data protection are followed.
+
+    Modular Code Organization:
+        The JavaScript code is organized into modules for maintainability and scalability.
+        Each module handles specific functionality (e.g., authentication, test management).
+
+    Deployment:
+        The application is deployed on a public server, making it accessible online.
+        Users can access the application from anywhere with an internet connection.

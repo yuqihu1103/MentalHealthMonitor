@@ -1,11 +1,12 @@
 # Mental Health Monitor
-**Author:** Yuqi Hu
+**Author:** [Yuqi Hu](https://yuqihu1103.github.io/)
 
 **Class:** [CS5610 at Northeastern](https://johnguerra.co/classes/webDevelopment_fall_2023/)
 
 **Delopyment:**
 
-**Project Objectives**
+**Project Objectives:**
+
 The primary goal of the Mental Health Monitor is to provide users with a handy tool for assessing and monitoring their mental health (for example, anxiety and depression levels). It aims to offer a user-friendly and secure platform for individuals to gain insights into their mental well-being, track changes, and thus be able to make informed decisions about their mental health.
 
 ## Instructions to Build and Use

@@ -21,7 +21,7 @@ The primary goal of the Mental Health Monitor is to provide users with a handy t
 ## Project Design
 Design documents can be found in the [docs](docs) folder, including:
 1. [Project Description](docs/project_description.txt)
-2. [User Personas and User Stories]()
+2. [User Personas and User Stories](docs/user_personas_and_stories.txt)
 3. [Design Mockup]()  overview:
 
 ## Others

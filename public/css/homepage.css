@@ -1,0 +1,21 @@
+body {
+    background-image: url('../assets/homepage_main_photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main, footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .main-intro div{
+    max-width: 35vw;
+  }

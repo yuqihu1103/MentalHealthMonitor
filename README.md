@@ -1,5 +1,5 @@
 # Mental Health Monitor
-**Author:** [Yuqi Hu](https://yuqihu1103.github.io/)
+**Authors:** [Yuqi Hu](https://yuqihu1103.github.io/) and 
 
 **Class:** [CS5610 at Northeastern](https://johnguerra.co/classes/webDevelopment_fall_2023/)
 

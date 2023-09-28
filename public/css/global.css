@@ -1,3 +1,21 @@
+body {
+    background-image: url('../assets/background_picture.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
 /*styling of the navbar*/
 .navbar-nav {
     margin-left: auto;

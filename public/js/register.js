@@ -3,6 +3,8 @@ and complete information. Validate email formats, password strength, and check
 if the password and confirm password fields match. Before sending data to server*/
 
 document.addEventListener('DOMContentLoaded', function () {
+    //console.log('DOMContentLoaded event fired'); 
+
     const registrationForm = document.getElementById('registration-form');
     const usernameField = document.getElementById('username');
     const emailField = document.getElementById('email');
@@ -12,30 +14,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const errorContainer = document.getElementById('error-container');
     const registerButton = document.getElementById('register-button');
 
-    usernameField.addEventListener('blur', validateUsername);
-    emailField.addEventListener('blur', validateEmail);
-    passwordField.addEventListener('blur', validatePassword);
-    confirmPasswordField.addEventListener('blur', validateConfirmPassword);
+    usernameField.addEventListener('blur', validateAllFields);
+    emailField.addEventListener('blur', validateAllFields);
+    passwordField.addEventListener('blur', validateAllFields);
+    confirmPasswordField.addEventListener('blur', validateAllFields);
 
     registrationForm.addEventListener('submit', function (event) {
         event.preventDefault();
-
+    
         const isValid = validateAllFields();
-
+    
         if (isValid) {
+            console.log("form submitted")
             registrationForm.submit();
         }
     });
+    
 
     //validate username
     function validateUsername() {
         const usernameValue = usernameField.value;
         if (usernameValue.length < 3) {
             displayError(usernameField, 'Username must be at least 3 characters long');
+            return false
         } else {
             clearError(usernameField);
+            return true
         }
-        validateAllFields();
     }
 
     //validate email
@@ -44,10 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailValue)) {
             displayError(emailField, 'Enter a valid email address');
+            return false
         } else {
             clearError(emailField);
+            return true
         }
-        validateAllFields();
     }
 
     //validate password
@@ -55,10 +61,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const passwordValue = passwordField.value;
         if (passwordValue.length < 6) {
             displayError(passwordField, 'Password must be at least 6 characters long');
+            return false
         } else {
             clearError(passwordField);
+            return true
         }
-        validateAllFields();
     }
 
     //validate confirm password
@@ -66,17 +73,23 @@ document.addEventListener('DOMContentLoaded', function () {
         const confirmPasswordValue = confirmPasswordField.value;
         if (confirmPasswordValue !== passwordField.value) {
             displayError(confirmPasswordField, 'Passwords must match');
+            return false
         } else {
             clearError(confirmPasswordField);
+            return true
         }
-        validateAllFields();
     }
 
     //validate all fields and enable/disable the register button
     function validateAllFields() {
-        const isValid = usernameField.checkValidity() && emailField.checkValidity() &&
-            passwordField.checkValidity() && confirmPasswordField.checkValidity();
+        const isUsernameValid = validateUsername();
+        const isEmailValid = validateEmail();
+        const isPasswordValid = validatePassword();
+        const isConfirmPasswordValid = validateConfirmPassword();
 
+        // Check overall form validity
+        const isValid = isUsernameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid;
+        console.log(isValid)
         if (isValid) {
             registerButton.classList.remove('disabled');
         } else {

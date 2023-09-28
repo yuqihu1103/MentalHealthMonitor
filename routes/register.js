@@ -8,8 +8,11 @@ const router = express.Router();
 
 // Registration route
 router.post('/register', async (req, res) => {
+  console.log('POST request to /register received');
   const { username, email, password } = req.body;
-
+  console.log('Username:', username);
+  console.log('Email:', email);
+  console.log('Password:', password); 
   // server-side validation of username, email, and password
   if (!username || username.length < 3) {
     return res.status(400).json({ error: 'Username must be at least 3 characters long' });
@@ -20,8 +23,8 @@ router.post('/register', async (req, res) => {
     return res.status(400).json({ error: 'Enter a valid email address' });
   }
 
-  if (!password || password.length < 8) {
-    return res.status(400).json({ error: 'Password must be at least 8 characters long' });
+  if (!password || password.length < 6) {
+    return res.status(400).json({ error: 'Password must be at least 6 characters long' });
   }
 
   // Check if the email is already registered
@@ -45,6 +48,7 @@ router.post('/register', async (req, res) => {
   try {
     const userId = await UserModel.createUser(user);
     res.status(201).json({ message: 'Registration successful', userId });
+    console.log("created user")
   } catch (error) {
     console.error('Error creating user:', error);
     res.status(500).json({ error: 'Registration failed' });

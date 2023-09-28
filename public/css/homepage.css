@@ -1,21 +1,39 @@
 body {
-    background-image: url('../assets/homepage_main_photo.jpg');
+    background-image: url('../assets/background_picture.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-  }
-  
-  main, footer {
+}
+
+main,
+footer {
     background-color: rgba(255, 255, 255, 0.8);
     max-width: 80vw;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-  }
+}
 
-  .main-intro div{
-    max-width: 35vw;
-  }
+main h1 {
+    margin-bottom: 2%;
+    color: #3c3f4a;
+}
+
+main p {
+    margin-top: 5%;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    text-align: left;
+    color: #3c3f4a;
+}
+
+footer {
+    color: #3c3f4a;
+}
+
+footer h3 {
+    font-size: x-large;
+}

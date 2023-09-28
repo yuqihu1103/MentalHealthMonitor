@@ -1,17 +1,16 @@
 // Import required modules and User model
 const express = require('express');
 const UserModel = require('../models/user');
+const bcrypt = require('bcrypt');
 
 // Create an Express router
 const router = express.Router();
 
 // Registration route
 router.post('/register', async (req, res) => {
-  // Retrieve user data from the request body
   const { username, email, password } = req.body;
 
-  // Implement server-side validation here
-  // Example: Check if username, email, and password meet your validation criteria
+  // server-side validation of username, email, and password
   if (!username || username.length < 3) {
     return res.status(400).json({ error: 'Username must be at least 3 characters long' });
   }
@@ -31,14 +30,15 @@ router.post('/register', async (req, res) => {
     return res.status(400).json({ error: 'Email is already registered' });
   }
 
-  // Hash the password (you should use a password hashing library like bcrypt)
-  // For simplicity, we won't hash the password in this example
+  // Hash the password
+  const saltRounds = 10; // You can configure the number of salt rounds
+  const hashedPassword = await bcrypt.hash(password, saltRounds);
 
   // Create a user object
   const user = {
     username,
     email,
-    password, // Remember to hash this password
+    password: hashedPassword,
   };
 
   // Create the user in the database
@@ -51,5 +51,4 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Export the router
 module.exports = router;

@@ -1,0 +1,29 @@
+main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main h1,
+main p {
+    color: #3c3f4a;
+}
+
+main h1 {
+    margin-bottom: 5%;
+}
+
+main p {
+    font-size: larger;
+    margin-bottom: 2%;
+}
+
+form {
+    margin: 4%;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}

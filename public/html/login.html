@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Yuqi Hu" />
+    <meta
+      name="description"
+      content="This page allows users to log in to the Mental Health Montor."
+    />
+    <title>Log in to Mental Health Monitor</title>
+    <link rel="icon" type="image/png" href="../assets/mental_health_icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fuggles&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img
+              src="../assets/mental_health_icon.png"
+              alt="Icon of the Mental Health Monitor"
+              width="30"
+              height="30"
+              class="d-inline-block align-text-top"
+            />Mental Health Monitor</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto" id="nav-bar">
+              <li class="nav-item">
+                <a class="nav-link" href="./learn_more.html"> Learn More </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Log in to Mental Health Monitor</h1>
+      <p>Don't have an account? <a href="./register.html">Register</a> now!</p>
+      <div class="row justify-content-md-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <form>
+            <div class="mb-3">
+              <label for="credentialType" class="form-label"
+                >Choose the credential to log in with</label
+              >
+              <select
+                type="credentialType"
+                id="credentialType"
+                class="form-select"
+                name="credentialType"
+                required
+              >
+                <option>Username</option>
+                <option>Email</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="credential" class="form-label"
+                >Username or Email address</label
+              >
+              <input
+                type="credential"
+                class="form-control"
+                id="credential"
+                name="credential"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Log in</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/login.js"></script>
+  </body>
+</html>

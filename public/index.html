@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,20 +6,32 @@
     <meta name="author" content="Yuqi Hu" />
     <meta
       name="description"
-      content="The homepage of the Mental Health Monitor application. User can also
-              learn more about the application, register, or log in"
+      content="The homepage of the Mental Health Monitor application. This page displays an 
+      introduction to the page. User can redirect to the login or the register page from here."
     />
     <title>Mental Health Monitor</title>
     <link rel="icon" type="image/png" href="./assets/mental_health_icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fuggles&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/homepage.css" />
   </head>
 
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" id="home-link" href="#"
+          <a class="navbar-brand" href="#"
             ><img
               src="./assets/mental_health_icon.png"
               alt="Icon of the Mental Health Monitor"
@@ -42,15 +54,12 @@
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto" id="nav-bar">
               <li class="nav-item">
-                <a class="nav-link" id="learn-more-link" href="#">
+                <a class="nav-link" href="./html/learn_more.html">
                   Learn More
                 </a>
               </li>
-              <li class="nav-item" id="register-link">
-                <a class="nav-link" href="#"> Register </a>
-              </li>
-              <li class="nav-item" id="login-link">
-                <a class="nav-link" href="#"> Log In </a>
+              <li class="nav-item">
+                <a class="nav-link" href="./html/login.html"> Log In </a>
               </li>
             </ul>
           </div>
@@ -58,13 +67,44 @@
       </nav>
     </header>
 
-    <main id="content-container"></main>
+    <main>
+      <h1 class="text-center">Welcome to the Mental Health Monitor</h1>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-12">
+            <img
+              src="./assets/homepage_main_photo.jpg"
+              alt="Artwork illustrating positive mental health"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <p>
+              The Mental Health Monitor is your trusted companion on your
+              journey to emotional well-being. Our mission is to provide you
+              with valuable insights into your mental health and help you take
+              control of your emotional wellness.
+            </p>
+            <p>
+              Whether you're looking to track your progress, gain
+              self-awareness, or simply explore your mental health, we're here
+              to support you every step of the way. Register today to get
+              started on your path to a healthier mind and a brighter future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h3>Contact the Authors</h3>
+      <p>email: hu.yuqi@northeastern.edu</p>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

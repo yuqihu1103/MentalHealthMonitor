@@ -1,9 +1,9 @@
-footer {
-    background-color: rgba(255, 255, 255, 0.9);
+main footer {
     max-width: 80vw;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    color: #3c3f4a;
 }
 
 main h1 {
@@ -11,7 +11,7 @@ main h1 {
     color: #3c3f4a;
 }
 
-main p {
+main > p {
     margin-top: 5%;
     font-size: 1.5em;
     font-family: sans-serif;
@@ -19,10 +19,6 @@ main p {
     color: #3c3f4a;
 }
 
-footer {
-    color: #3c3f4a;
-}
-
-footer h3 {
+main footer h3 {
     font-size: x-large;
 }

@@ -101,7 +101,7 @@ document.getElementById("anxiety").addEventListener("click", () => {
       questionFiveResponse +
       questionSixResponse +
       questionSevenResponse;
-    console.log(testScore)
+    console.log(testScore);
 
     //type of test
     const testType = "depression";

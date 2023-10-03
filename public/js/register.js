@@ -19,14 +19,38 @@ document.addEventListener('DOMContentLoaded', function () {
     passwordField.addEventListener('blur', validateAllFields);
     confirmPasswordField.addEventListener('blur', validateAllFields);
 
-    registrationForm.addEventListener('submit', function (event) {
+    registrationForm.addEventListener('submit', async function (event) {
         event.preventDefault();
     
         const isValid = validateAllFields();
     
         if (isValid) {
-            console.log("form submitted")
-            registrationForm.submit();
+            try {
+                const response = await fetch('/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: usernameField.value,
+                        email: emailField.value,
+                        password: passwordField.value,
+                    })
+                });
+    
+                if (response.ok) {
+                    // Registration was successful, redirect to the login page
+                    window.location.href = 'login.html';
+                } else {
+                    // Registration failed, display an error message
+                    const data = await response.json();
+                    if (data.error) {
+                        displayError(errorContainer, data.error);
+                    }
+                }
+            } catch (error) {
+                console.error('Error during registration:', error);
+            }
         }
     });
     
@@ -89,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Check overall form validity
         const isValid = isUsernameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid;
-        console.log(isValid)
+        //console.log(isValid)
         if (isValid) {
             registerButton.classList.remove('disabled');
         } else {

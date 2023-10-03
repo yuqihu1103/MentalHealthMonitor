@@ -30,9 +30,9 @@ const UserModel = {
     return result.insertedId;
   },
 
-  async getUserById(id) {
+  async getUserByUsername(username) {
     const db = getDatabase();
-    return db.collection('users').findOne({ _id: ObjectId(id) });
+    return db.collection('users').findOne({ username });
   },
 
   async getUserByEmail(email) {

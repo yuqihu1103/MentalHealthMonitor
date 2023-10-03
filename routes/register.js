@@ -34,6 +34,12 @@ router.post('/register', async (req, res) => {
     return res.status(400).json({ error: 'Email is already registered' });
   }
 
+  // Check if the username is already registered
+  const existingUser2 = await UserModel.getUserByUsername(username);
+  if (existingUser2) {
+    return res.status(400).json({ error: 'Username is already registered' });
+  }
+
   // Hash the password
   const saltRounds = 10; // You can configure the number of salt rounds
   const hashedPassword = await bcrypt.hash(password, saltRounds);

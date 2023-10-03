@@ -8,6 +8,9 @@ body {
 
 p {
   font-size: x-large;
+  border-top: 3px solid #007bff;
+  padding-top: 10px;
+  margin-top: 20px;
 }
 
 h1 {
@@ -26,9 +29,6 @@ h1 {
 h2 {
   margin-top: 0;
   color: #333;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
 }
 
 label {

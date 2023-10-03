@@ -130,6 +130,7 @@ document.getElementById("anxiety").addEventListener("click", () => {
 
 const phq_9 = `
 <h2>PHQ-9 Test</h2>
+<a class="btn btn-primary" href="take_test.html" role="button">Back</a>
 <p>
   Over the last 2 weeks, how often have you been bothered by any of the
   following problems?
@@ -232,6 +233,7 @@ const phq_9 = `
 
 const gad_7 = `
 <h2>GAD-7 Test</h2>
+<a class="btn btn-primary" href="take_test.html" role="button">Back</a>
   <p>
     Over the last two weeks, how often have you been bothered by the
     following problems?

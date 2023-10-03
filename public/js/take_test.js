@@ -101,10 +101,10 @@ document.getElementById("anxiety").addEventListener("click", () => {
       questionFiveResponse +
       questionSixResponse +
       questionSevenResponse;
-    console.log(testScore)
+    //console.log(testScore)
 
     //type of test
-    const testType = "depression";
+    const testType = "anxiety";
 
     //to be implemented: user who's taking the test
     const user = "blabla";
@@ -251,7 +251,7 @@ const gad_7 = `
       </select>
 
       <label for="q2">2. Not being able to stop or control worrying</label>
-      <select name="q1" id="q1">
+      <select name="q2" id="q2">
         <option value="0">Not at all</option>
         <option value="1">Several days</option>
         <option value="2">More than half the days</option>

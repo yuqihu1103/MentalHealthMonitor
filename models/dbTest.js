@@ -2,7 +2,7 @@ const {
   connectToDatabase,
   insertTestResult,
   getTestResultsByUserId,
-} = require("./db.js");
+} = require("../db/db.js");
 
 async function testDatabaseOperations() {
   await connectToDatabase();

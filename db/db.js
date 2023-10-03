@@ -4,8 +4,8 @@ const { MongoClient } = require("mongodb");
 
 const dbName = "MentalHealthMonitor";
 
-const uri = `mongodb://localhost:27017/${dbName}`;
-const client = new MongoClient(uri);
+const url = `mongodb://localhost:27017/${dbName}`;
+const client = new MongoClient(url);
 
 async function connectToDatabase() {
   try {

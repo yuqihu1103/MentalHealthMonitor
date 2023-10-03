@@ -1,0 +1,56 @@
+/* Importing the same font families from the homepage for consistency */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fuggles&family=Permanent+Marker&display=swap");
+
+body {
+  font-family: "Caveat", cursive; /* Using the Caveat font to match homepage */
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: "Permanent Marker", cursive; /* Using the Permanent Marker font for headers */
+}
+
+.button-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-btn {
+  display: block;
+  width: 80%;
+  padding: 15px;
+  margin: 10px 0;
+  color: #fff;
+  background-color: #007bff;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: "Arial", sans-serif; /* Changing the font to Arial for better readability */
+  font-size: 16px; /* This can be adjusted based on your preference */
+}
+
+.dashboard-btn:hover {
+  background-color: #0056b3;
+}
+
+.dashboard-btn:hover {
+  background-color: #0056b3;
+}

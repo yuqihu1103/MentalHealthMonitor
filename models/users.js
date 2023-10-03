@@ -7,11 +7,11 @@ const { getDatabase } = require('../db/db');
 const bcrypt = require('bcrypt');
 
 // Define the User schema
-const userSchema = {
-  username: String,
-  email: String,
-  password: String,
-};
+//const userSchema = {
+//  username: String,
+//  email: String,
+//  password: String,
+//};
 
 // Create a User model
 const UserModel = {

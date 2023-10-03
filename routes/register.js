@@ -55,7 +55,7 @@ router.post('/register', async (req, res) => {
   try {
     const userId = await UserModel.createUser(user);
     res.status(201).json({ message: 'Registration successful', userId });
-    console.log("created user")
+    //console.log("created user")
   } catch (error) {
     console.error('Error creating user:', error);
     res.status(500).json({ error: 'Registration failed' });

@@ -224,7 +224,7 @@ const phq_9 = `
       <option value="2">More than half the days</option>
       <option value="3">Nearly every day</option>
     </select>
-
+    <br>
     <button type="submit" class="submit-btn">Submit</button>
   </fieldset>
 </form>
@@ -295,7 +295,7 @@ const gad_7 = `
         <option value="2">More than half the days</option>
         <option value="3">Nearly every day</option>
       </select>
-
+      <br>
       <button type="submit" class="submit-btn">Submit</button>
     </fieldset>
   </form>

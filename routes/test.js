@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.post('/test', async (req, res) => {
     console.log("reached here")
-    console.log(req)
+    console.log(req.body)
 });
 
 module.exports = router;

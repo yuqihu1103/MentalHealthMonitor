@@ -47,6 +47,15 @@ document.getElementById("depression").addEventListener("click", () => {
       questionEightResponse +
       questionNineResponse;
 
+    // determine anxiety severity
+    function getGAD7Severity(score) {
+      if (score >= 0 && score <= 4) return "minimal anxiety";
+      if (score >= 5 && score <= 9) return "mild anxiety";
+      if (score >= 10 && score <= 14) return "moderate anxiety";
+      if (score >= 15) return "severe anxiety";
+    }
+    const anxietySeverity = getGAD7Severity(testScore);
+
     //type of test
     const testType = "depression";
 
@@ -58,6 +67,7 @@ document.getElementById("depression").addEventListener("click", () => {
       user,
       testType,
       testScore,
+      anxietySeverity,
       time: getTime(),
     };
     //console.log(testData)
@@ -103,6 +113,15 @@ document.getElementById("anxiety").addEventListener("click", () => {
       questionSevenResponse;
     console.log(testScore);
 
+    function getPHQ9Severity(score) {
+      if (score >= 1 && score <= 4) return "minimal depression";
+      if (score >= 5 && score <= 9) return "mild depression";
+      if (score >= 10 && score <= 14) return "moderate depression";
+      if (score >= 15 && score <= 19) return "moderately severe depression";
+      if (score >= 20) return "severe depression";
+    }
+    const depressionSeverity = getPHQ9Severity(testScore);
+
     //type of test
     const testType = "anxiety";
 
@@ -114,6 +133,7 @@ document.getElementById("anxiety").addEventListener("click", () => {
       user,
       testType,
       testScore,
+      depressionSeverity,
       time: getTime(),
     };
 

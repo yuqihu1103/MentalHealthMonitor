@@ -65,7 +65,13 @@ const UserModel = {
       return false; // User not found
     }
 
-    return bcrypt.compare(password, user.password);
+    //console.log("Stored Password:", user.password);
+    //console.log("Entered Password:", password);
+
+    const passwordMatch = await bcrypt.compare(password, user.password);
+    //console.log("Password Match:", passwordMatch);
+
+    return passwordMatch;
   },
 };
 

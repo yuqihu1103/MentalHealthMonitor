@@ -21,8 +21,43 @@ document.addEventListener("DOMContentLoaded", function () {
     const isValid = validateAllFields();
 
     if (isValid) {
-      loginForm.submit();
-    }
+        try {
+          const response = await fetch("/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              credentialType: credentialTypeField.value,
+              credential: credentialField.value,
+              password: passwordField.value,
+            }),
+          });
+  
+          if (response.ok) {
+            clearError(errorContainer);
+            // Registration was successful, show a message before redirecting
+            const message = "Log in successful. Redirecting to your dashboard.";
+            const messageElement = document.getElementById(
+              "login-message"
+            );
+            messageElement.textContent = message;
+  
+            // Redirect to the dashboard page after a short delay
+            setTimeout(function () {
+              window.location.href = "dashboard.html";
+            }, 2000);
+          } else {
+            // login failed, display an error message
+            const data = await response.json();
+            if (data.error) {
+              displayError(errorContainer, data.error);
+            }
+          }
+        } catch (error) {
+          console.error("Error during login:", error);
+        }
+      }
   });
 
   //validate user credential - username or email

@@ -8,8 +8,8 @@ const router = express.Router();
 
 // Login route
 router.post("/login", async (req, res) => {
-  console.log("reached login route");
-  console.log(req.body);
+  //console.log("reached login route");
+  //console.log(req.body);
   const { credentialType, credential, password } = req.body;
 
   let user;
@@ -24,6 +24,8 @@ router.post("/login", async (req, res) => {
   if (!user) {
     return res.status(401).json({ error: "User not found" });
   }
+  //console.log(user)
+  //console.log(password)
 
   const passwordMatch = await UserModel.verifyPassword(user.email, password);
 

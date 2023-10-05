@@ -92,6 +92,10 @@ function loadLearnMore() {
                     You can get a valid and reliable measurement of your anxiety
                     level within a minute and make informed decisions based on that.
                 </p>
+                <p class="card-text">
+                    Please seek professional support if your test results indicate
+                    high levels of anxiety.
+                </p>
                 </div>
             </div>
             </div>
@@ -113,6 +117,10 @@ function loadLearnMore() {
                 <p class="card-text">
                     Enjoy the convenience of this short scale and rest assured with
                     its excellent validity and reliability.
+                </p>
+                <p class="card-text">
+                    Please seek professional support if your test results indicate
+                    high levels of depression.
                 </p>
                 </div>
             </div>

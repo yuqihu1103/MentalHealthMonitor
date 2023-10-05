@@ -1,10 +1,10 @@
-const express = require("express");
-const { connectToDatabase } = require("./db/db");
-const bodyParser = require("body-parser");
-const path = require("path");
-const registerRoute = require("./routes/register");
-const testRoute = require("./routes/test");
-const loginRoute = require("./routes/login");
+import express from "express";
+import { connectToDatabase } from "./db/db";
+import bodyParser from "body-parser";
+import path from "path";
+import registerRoute from "./routes/register";
+import testRoute from "./routes/test";
+import loginRoute from "./routes/login";
 
 const app = express();
 
@@ -20,9 +20,7 @@ app.post("/register", registerRoute);
 app.post("/test", testRoute);
 app.post("/login", loginRoute);
 
-// Your other routes and middleware go here
-
-// Start your server
+// Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

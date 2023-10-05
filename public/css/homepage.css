@@ -26,3 +26,15 @@ footer {
 footer h3 {
     font-size: x-large;
 }
+
+.card-title {
+    font-family: 'Caveat', cursive;
+    font-family: 'Fuggles', cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 100;
+}
+
+.card-text {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}

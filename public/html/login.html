@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -66,7 +66,7 @@
       <p>Don't have an account? <a href="./register.html">Register</a> now!</p>
       <div class="row justify-content-md-center">
         <div class="col-lg-4 col-md-6 col-sm-8">
-          <form>
+          <form id="login-form">
             <div class="mb-3">
               <label for="credentialType" class="form-label"
                 >Choose the credential to log in with</label
@@ -105,7 +105,13 @@
                 required
               />
             </div>
-            <button type="submit" class="btn btn-primary">Log in</button>
+            <button
+              type="submit"
+              class="btn btn-primary disabled"
+              id="login-button"
+            >
+              Log in
+            </button>
           </form>
         </div>
       </div>

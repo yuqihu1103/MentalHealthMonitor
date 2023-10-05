@@ -18,12 +18,8 @@ const UserModel = {
   async createUser(user) {
     const db = getDatabase();
 
-    // Hash the password before storing it
-    const hashedPassword = await bcrypt.hash(user.password, 10);
-
     const newUser = {
-      ...user,
-      password: hashedPassword,
+      ...user
     };
 
     const result = await db.collection("users").insertOne(newUser);

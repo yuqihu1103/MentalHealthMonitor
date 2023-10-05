@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  //validate user credential - username or email
   function validateCredential() {
     if (credentialTypeField.value == "Username") {
       const usernameValue = credentialField.value;

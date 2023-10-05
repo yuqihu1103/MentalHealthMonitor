@@ -8,12 +8,14 @@ const router = express.Router();
 
 // Login route
 router.post("/login", async (req, res) => {
+  console.log("reached login route");
+  console.log(req.body);
   const { credentialType, credential, password } = req.body;
 
   let user;
-  if (credentialType === "username") {
+  if (credentialType === "Username") {
     user = await UserModel.getUserByUsername(credential);
-  } else if (credentialType === "email") {
+  } else if (credentialType === "Email") {
     user = await UserModel.getUserByEmail(credential);
   } else {
     return res.status(400).json({ error: "Invalid credential type" });

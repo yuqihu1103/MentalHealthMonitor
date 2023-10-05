@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (usernameValue.length < 3) {
       displayError(
         usernameField,
-        "Username must be at least 3 characters long"
+        "Invalid username: less than 3 characters long"
       );
       return false;
     } else {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailValue = emailField.value;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailValue)) {
-      displayError(emailField, "Enter a valid email address");
+      displayError(emailField, "Invalid email address");
       return false;
     } else {
       clearError(emailField);
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (passwordValue.length < 6) {
       displayError(
         passwordField,
-        "Password must be at least 6 characters long"
+        "Invalid password: less than 6 characters long"
       );
       return false;
     } else {
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function validateConfirmPassword() {
     const confirmPasswordValue = confirmPasswordField.value;
     if (confirmPasswordValue !== passwordField.value) {
-      displayError(confirmPasswordField, "Passwords must match");
+      displayError(confirmPasswordField, "Make sure your passwords must match");
       return false;
     } else {
       clearError(confirmPasswordField);

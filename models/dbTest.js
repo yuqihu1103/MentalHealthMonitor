@@ -1,8 +1,6 @@
-const {
-  connectToDatabase,
-  insertTestResult,
-  getTestResultsByUserId,
-} = require("../db/db.js");
+import { connectToDatabase } from "../db/db";
+
+import { insertTestResult, getTestResultsByUserId } from "./test_result";
 
 async function testDatabaseOperations() {
   await connectToDatabase();

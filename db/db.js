@@ -1,6 +1,6 @@
 // db.js
 
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 
 const dbName = "MentalHealthMonitor";
 

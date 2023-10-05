@@ -1,7 +1,7 @@
 // Import required modules and User model
-const express = require('express');
-const UserModel = require('../models/users');
-const bcrypt = require('bcrypt');
+import express from "express";
+import UserModel from "../models/users";
+import bcrypt from "bcrypt";
 
 // Create an Express router
 const router = express.Router();

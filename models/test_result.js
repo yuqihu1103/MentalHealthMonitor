@@ -1,4 +1,4 @@
-import { getDatabase } from "../db/db";
+const { getDatabase } = require("./db.js");
 
 async function createTestResult(data) {
   const db = getDatabase();

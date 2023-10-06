@@ -1,9 +1,10 @@
 /*This module defines the User model and provides CRUD (Create, Read - get by username or email, 
 Update, Delete) operations for managing user data in MongoDB. It also includes functions for 
 password hashing and password verification.*/
-import bcrypt from "bcrypt";
-import ObjectId from "mongodb";
-import { getDatabase } from "../db/db";
+
+const { ObjectId } = require("mongodb");
+const { getDatabase } = require("../db/db");
+const bcrypt = require("bcrypt");
 
 // Define the User schema
 //const userSchema = {

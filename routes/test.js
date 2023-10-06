@@ -1,7 +1,6 @@
 // Import required modules and User model
 const express = require('express');
-const UserModel = require('../models/users');
-const bcrypt = require('bcrypt');
+const testResultModel = require('../models/test_result');
 
 // Create an Express router
 const router = express.Router();
@@ -21,7 +20,7 @@ router.post("/test", async (req, res) => {
 
   // Create the test result in the database
   try {
-    await createTestResult(user);
+    await testResultModel.createTestResult(testData);
     res.status(201).json({ message: "Test completed successful"});
     //console.log("created test")
   } catch (error) {

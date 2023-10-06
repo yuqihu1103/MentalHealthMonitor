@@ -1,4 +1,4 @@
-const { getDatabase } = require("./db.js");
+const { getDatabase } = require("../db/db.js");
 
 async function createTestResult(data) {
   const db = getDatabase();

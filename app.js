@@ -1,10 +1,10 @@
 import express from "express";
-import { connectToDatabase } from "./db/db.js";
+import { connectToDatabase } from "./db/db";
 import bodyParser from "body-parser";
 import path from "path";
-import registerRoute from "./routes/register.js";
-import testRoute from "./routes/test.js";
-import loginRoute from "./routes/login.js";
+import registerRoute from "./routes/register";
+import testRoute from "./routes/test";
+import loginRoute from "./routes/login";
 
 const app = express();
 

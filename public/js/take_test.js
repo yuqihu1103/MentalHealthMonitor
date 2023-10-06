@@ -58,7 +58,7 @@ document.getElementById("depression").addEventListener("click", () => {
       if (score >= 15 && score <= 19) return "moderately severe depression";
       if (score >= 20) return "severe depression";
     }
-    const depressionSeverity = getPHQ9Severity(testScore);
+    const severity = getPHQ9Severity(testScore);
 
     //to be implemented: user who's taking the test
     const user = "blabla";
@@ -68,7 +68,7 @@ document.getElementById("depression").addEventListener("click", () => {
       user,
       testType,
       testScore,
-      depressionSeverity,
+      severity,
       time: getTime(),
     };
     //console.log(testData)
@@ -125,7 +125,7 @@ document.getElementById("anxiety").addEventListener("click", () => {
       if (score >= 15) return "severe anxiety";
     }
 
-    const anxietynSeverity = getGAD7Severity(testScore);
+    const severity = getGAD7Severity(testScore);
 
     //to be implemented: user who's taking the test
     const user = "blabla";
@@ -135,7 +135,7 @@ document.getElementById("anxiety").addEventListener("click", () => {
       user,
       testType,
       testScore,
-      anxietynSeverity,
+      severity,
       time: getTime(),
     };
 

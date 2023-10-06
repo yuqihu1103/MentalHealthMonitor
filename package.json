@@ -13,5 +13,15 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
-  }
+  },
+  "name": "mental_health_monitor",
+  "description": "**Authors:** [Yuqi Hu](https://yuqihu1103.github.io/)",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "Yuqi Hu",
+  "license": "MIT",
+  "type": "module"
 }

@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", loadHomepage)
+document.addEventListener("DOMContentLoaded", loadHomepage);
 const homeLink = document.getElementById("home-link");
-const learnMoreLink = document.getElementById("learn-more-link")
-homeLink.addEventListener("click", loadHomepage)
-learnMoreLink.addEventListener("click", loadLearnMore)
+const learnMoreLink = document.getElementById("learn-more-link");
+homeLink.addEventListener("click", loadHomepage);
+learnMoreLink.addEventListener("click", loadLearnMore);
 
 function loadHomepage() {
   const mainContent = document.getElementById("main-content");

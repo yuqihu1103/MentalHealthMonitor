@@ -1,6 +1,6 @@
 // Import required modules and User model
-const express = require('express');
-const testResultModel = require('../models/test_result');
+const express = require("express");
+const testResultModel = require("../models/test_result");
 
 // Create an Express router
 const router = express.Router();
@@ -21,7 +21,7 @@ router.post("/test", async (req, res) => {
   // Create the test result in the database
   try {
     await testResultModel.createTestResult(testData);
-    res.status(201).json({ message: "Test completed successful"});
+    res.status(201).json({ message: "Test completed successful" });
     //console.log("created test")
   } catch (error) {
     console.error("Error storing test result:", error);

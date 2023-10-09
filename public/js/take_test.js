@@ -47,6 +47,9 @@ document.getElementById("depression").addEventListener("click", () => {
       questionEightResponse +
       questionNineResponse;
 
+    // for test, remove when succeess
+    console.log(`PHQ-9 Test Score: ${testScore}`);
+
     //type of test
     const testType = "depression";
 
@@ -112,7 +115,9 @@ document.getElementById("anxiety").addEventListener("click", () => {
       questionFiveResponse +
       questionSixResponse +
       questionSevenResponse;
-    console.log(testScore);
+
+    // for test, remove when succeess
+    console.log(`GAD-7 Test Score: ${testScore}`);
 
     //type of test
     const testType = "anxiety";

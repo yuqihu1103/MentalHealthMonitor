@@ -5,10 +5,11 @@ const testResultModel = require("../models/test_result");
 // Create an Express router
 const router = express.Router();
 
-router.post("/test", async (req, res) => {
+router.post("/", async (req, res) => {
   //console.log("reached here")
   //console.log(req.body)
   const { user, testType, testScore, severity, time } = req.body;
+  console.log("Test Score:", testScore); // <-- This line logs the test score
 
   const testData = {
     user,

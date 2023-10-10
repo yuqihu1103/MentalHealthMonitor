@@ -13,17 +13,19 @@ async function createTestResult(data) {
   }
 }
 
-async function getTestResultsByUserId(userId) {
+async function getTestResultsByUsername(username) {
   const db = getDatabase();
   const testResultsCollection = db.collection("testResults");
 
   try {
     const results = await testResultsCollection
-      .find({ userid: userId })
+      .find({ user: username })
       .toArray();
+    //console.log(results)
     return results;
   } catch (error) {
     console.error("Error fetching test results:", error);
+    throw error;
   }
 }
 
@@ -66,7 +68,7 @@ async function deleteTestResultById(testResultId) {
 
 module.exports = {
   createTestResult,
-  getTestResultsByUserId,
+  getTestResultsByUsername,
   updateTestResultById,
   deleteTestResultById,
 };

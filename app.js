@@ -6,7 +6,7 @@ const path = require("path");
 const registerRoute = require("./routes/register");
 const loginRoute = require("./routes/login");
 const testRoute = require("./routes/test");
-const { getTestResultsByUserId } = require("./models/test_result");
+const { getTestResultsByUsername } = require("./models/test_result");
 
 const app = express();
 
@@ -49,14 +49,19 @@ app.get("/get-username", isAuthenticated, (req, res) => {
   }
 });
 
-//app.get("/get-history", isAuthenticated, (req, res) => {
- // const username = req.session.username;
+app.get("/get-history", isAuthenticated, async (req, res) => {
+  const username = req.session.username;
 
-  //const history_data = await getTestResultsByUsername(username)
-  
-  //let history_data = [{},]
-  //res.json({ history_data });
-//})
+  try {
+    const history_data = await getTestResultsByUsername(username);
+    //console.log(history_data);
+    res.json({ history_data });
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "An error occurred while fetching history data." });
+  }
+});
+
 
 //logout route
 app.get("/logout", (req, res) => {

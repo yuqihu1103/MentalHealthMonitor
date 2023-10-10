@@ -49,6 +49,7 @@ app.get("/get-username", isAuthenticated, (req, res) => {
   }
 });
 
+//get-history route
 app.get("/get-history", isAuthenticated, async (req, res) => {
   const username = req.session.username;
 
@@ -61,7 +62,6 @@ app.get("/get-history", isAuthenticated, async (req, res) => {
     res.status(500).json({ error: "An error occurred while fetching history data." });
   }
 });
-
 
 //logout route
 app.get("/logout", (req, res) => {

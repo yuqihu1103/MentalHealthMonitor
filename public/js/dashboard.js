@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  //get username of current logged-in user
+  fetch("/get-username", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch username");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data.username);
+    })
+    .catch((error) => {
+      console.error("Error fetching username:", error);
+    });
+
   const testResultsBtn = document.getElementById("test-results");
 
   testResultsBtn.addEventListener("click", async () => {

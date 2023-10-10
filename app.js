@@ -38,14 +38,13 @@ app.post("/register", registerRoute);
 app.post("/login", loginRoute);
 app.post("/test", testRoute);
 
-app.get("/dashboard", isAuthenticated, (req, res) => {
-  const username = req.session.username; // Retrieve the username from the session
-  res.render("dashboard", { username: username });
-});
-
-app.get("/take_test", isAuthenticated, (req, res) => {
-  const username = req.session.username; // Retrieve the username from the session
-  res.render("take_test", { username: username });
+app.get("/get-username", isAuthenticated, (req, res) => {
+  const username = req.session.username;
+  if (username) {
+    res.json({ username });
+  } else {
+    res.status(401).json({ error: "User not authenticated" });
+  }
 });
 
 //logout route

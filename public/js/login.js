@@ -4,6 +4,8 @@ strength Before sending data to server*/
 
 document.addEventListener("DOMContentLoaded", function () {
   //console.log('DOMContentLoaded event fired');
+  const loginContent = document.getElementById("login-content");
+  loginContent.innerHTML = loginMainContent;
 
   const loginForm = document.getElementById("login-form");
   const credentialTypeField = document.getElementById("credentialType");
@@ -21,42 +23,40 @@ document.addEventListener("DOMContentLoaded", function () {
     const isValid = validateAllFields();
 
     if (isValid) {
-        try {
-          const response = await fetch("/login", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              credentialType: credentialTypeField.value,
-              credential: credentialField.value,
-              password: passwordField.value,
-            }),
-          });
-          
-          if (response.ok) {
-            clearError(errorContainer);
-            const message = "Log in successful. Redirecting to your dashboard.";
-            const messageElement = document.getElementById(
-              "login-message"
-            );
-            messageElement.textContent = message;
-  
-            // Redirect to the dashboard page after a short delay
-            setTimeout(function () {
-              window.location.href = "dashboard.html";
-            }, 2000);
-          } else {
-            // login failed, display an error message
-            const data = await response.json();
-            if (data.error) {
-              displayError(errorContainer, data.error);
-            }
+      try {
+        const response = await fetch("/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            credentialType: credentialTypeField.value,
+            credential: credentialField.value,
+            password: passwordField.value,
+          }),
+        });
+
+        if (response.ok) {
+          clearError(errorContainer);
+          const message = "Log in successful. Redirecting to your dashboard.";
+          const messageElement = document.getElementById("login-message");
+          messageElement.textContent = message;
+
+          // Redirect to the dashboard page after a short delay
+          setTimeout(function () {
+            window.location.href = "dashboard.html";
+          }, 2000);
+        } else {
+          // login failed, display an error message
+          const data = await response.json();
+          if (data.error) {
+            displayError(errorContainer, data.error);
           }
-        } catch (error) {
-          console.error("Error during login:", error);
         }
+      } catch (error) {
+        console.error("Error during login:", error);
       }
+    }
   });
 
   //validate user credential - username or email
@@ -139,3 +139,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+const loginMainContent = `
+  <h1>Log in to Mental Health Monitor</h1>
+  <p>Don't have an account? <a href="./register.html">Register</a> now!</p>
+  <div id="login-message"></div>
+  <div id="error-container"></div>
+  <div class="row justify-content-md-center">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+      <form id="login-form" action="/login" method="post">
+        <div class="mb-3">
+          <label for="credentialType" class="form-label"
+            >Choose the credential to log in with</label
+          >
+          <select
+            type="credentialType"
+            id="credentialType"
+            class="form-select"
+            name="credentialType"
+            required
+          >
+            <option>Username</option>
+            <option>Email</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="credential" class="form-label"
+            >Username or Email address</label
+          >
+          <input
+            type="credential"
+            class="form-control"
+            id="credential"
+            name="credential"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary disabled"
+          id="login-button"
+        >
+          Log in
+        </button>
+      </form>
+    </div>
+  </div>
+`;

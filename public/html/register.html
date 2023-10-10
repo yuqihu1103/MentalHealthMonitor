@@ -64,77 +64,7 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Register for Mental Health Monitor Now!</h1>
-      <p>Already have an account? <a href="./login.html">Log in</a> here</p>
-      <div id="error-container"></div>
-      <div id="registration-message"></div>
-      <div class="row justify-content-md-center">
-        <div class="col-lg-4 col-md-6 col-sm-8">
-          <form id="registration-form" action="/register" method="post">
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input
-                type="text"
-                class="form-control"
-                name="username"
-                id="username"
-                required
-                aria-describedby="usernameRequirement"
-              />
-              <div id="usernameRequirement" class="form-text">
-                Username must be at least 3 characters long
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                required
-                aria-describedby="emailHelp"
-              />
-              <div id="emailHelp" class="form-text">
-                We'll never share your email with anyone else.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                name="password"
-                id="password"
-                required
-                aria-describedby="passwordRequirement"
-              />
-              <div id="passwordRequirement" class="form-text">
-                Password must be at least 6 characters long.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="confirm-password" class="form-label"
-                >Confirm Password</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                name="confirm-password"
-                id="confirm-password"
-                required
-                aria-describedby="confirmPasswordRequirement"
-              />
-              <div id="confirmPasswordRequirement" class="form-text">
-                Passwords must match.
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary disabled" id="register-button">Register</button>
-          </form>
-        </div>
-      </div>
-    </main>
+    <main id="register-content"></main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

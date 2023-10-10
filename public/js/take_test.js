@@ -13,6 +13,27 @@ function getTime() {
   return currentTime.toLocaleString();
 }
 
+// Fetch the username from the server
+let retrievedUsername;
+fetch("/get-username", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch username");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    retrievedUsername = data.username;
+  })
+  .catch((error) => {
+    console.error("Error fetching username:", error);
+  });
+
 document.getElementById("depression").addEventListener("click", () => {
   // Load the content for the "PHQ-9" test
   clearDirection();
@@ -64,7 +85,7 @@ document.getElementById("depression").addEventListener("click", () => {
     const severity = getPHQ9Severity(testScore);
 
     //to be implemented: user who's taking the test
-    const user = "blabla";
+    const user = retrievedUsername;
 
     //submit request with user, test type, test score, and time
     const testData = {
@@ -133,7 +154,7 @@ document.getElementById("anxiety").addEventListener("click", () => {
     const severity = getGAD7Severity(testScore);
 
     //to be implemented: user who's taking the test
-    const user = "blabla";
+    const user = retrievedUsername;
 
     //submit request with user, test type, test score, and time
     const testData = {

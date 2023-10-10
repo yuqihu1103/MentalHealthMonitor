@@ -6,6 +6,7 @@ const path = require("path");
 const registerRoute = require("./routes/register");
 const loginRoute = require("./routes/login");
 const testRoute = require("./routes/test");
+const { getTestResultsByUserId } = require("./models/test_result");
 
 const app = express();
 
@@ -47,6 +48,15 @@ app.get("/get-username", isAuthenticated, (req, res) => {
     res.status(401).json({ error: "User not authenticated" });
   }
 });
+
+//app.get("/get-history", isAuthenticated, (req, res) => {
+ // const username = req.session.username;
+
+  //const history_data = await getTestResultsByUsername(username)
+  
+  //let history_data = [{},]
+  //res.json({ history_data });
+//})
 
 //logout route
 app.get("/logout", (req, res) => {

@@ -26,17 +26,8 @@ h2 {
 
 .button-container {
   margin-top: 30px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.dashboard-btn:hover {
-  background-color: #0056b3;
-}
-
-.dashboard-btn:hover {
-  background-color: #0056b3;
+  margin-bottom: 30px;
 }
 
 #logout-message {

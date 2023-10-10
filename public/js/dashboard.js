@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   //get username of current logged-in user
   fetch("/get-username", {
     method: "GET",
@@ -15,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       console.log(data.username);
+      const usernameElement = document.getElementById("welcome-message");
+      if (usernameElement) {
+        usernameElement.innerHTML = `Welcome to your dashboard, ${data.username}`;
+      }
     })
     .catch((error) => {
       console.error("Error fetching username:", error);

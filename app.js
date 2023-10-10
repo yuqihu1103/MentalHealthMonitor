@@ -38,6 +38,7 @@ app.post("/register", registerRoute);
 app.post("/login", loginRoute);
 app.post("/test", testRoute);
 
+//get-username route
 app.get("/get-username", isAuthenticated, (req, res) => {
   const username = req.session.username;
   if (username) {

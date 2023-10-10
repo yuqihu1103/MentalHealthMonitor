@@ -84,7 +84,6 @@ document.getElementById("depression").addEventListener("click", () => {
     }
     const severity = getPHQ9Severity(testScore);
 
-    //to be implemented: user who's taking the test
     const user = retrievedUsername;
 
     //submit request with user, test type, test score, and time
@@ -97,7 +96,6 @@ document.getElementById("depression").addEventListener("click", () => {
     };
     //console.log(testData)
 
-    //the /test route to be implemented
     fetch("/test", {
       method: "POST",
       headers: {
@@ -153,7 +151,6 @@ document.getElementById("anxiety").addEventListener("click", () => {
 
     const severity = getGAD7Severity(testScore);
 
-    //to be implemented: user who's taking the test
     const user = retrievedUsername;
 
     //submit request with user, test type, test score, and time
@@ -165,7 +162,6 @@ document.getElementById("anxiety").addEventListener("click", () => {
       time: getTime(),
     };
 
-    //the /test route to be implemented
     fetch("/test", {
       method: "POST",
       headers: {

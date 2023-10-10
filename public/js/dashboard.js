@@ -21,10 +21,41 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => {
       console.error("Error fetching username:", error);
+      // Display a message
+      const messageDiv = document.getElementById("logout-message");
+      messageDiv.innerHTML = "You are not logged in.";
+
+      // Redirect to ../index.html after a short delay
+      //disable buttons and links
+      setTimeout(() => {
+        window.location.href = "../index.html";
+      }, 2000); // 2000 milliseconds (2 seconds) delay
     });
 
-  const testResultsBtn = document.getElementById("test-results");
+  const logOutButton = document.getElementById("log-out");
+  logOutButton.addEventListener("click", () => {
+    // Make an HTTP request to the server's /logout route
+    fetch("/logout", {
+      method: "GET",
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          // Display a message
+          const messageDiv = document.getElementById("logout-message");
+          messageDiv.innerHTML = "Logout successful";
 
+          // Redirect to ../index.html after a short delay
+          setTimeout(() => {
+            window.location.href = "../index.html";
+          }, 2000); // 2000 milliseconds (2 seconds) delay
+        }
+      })
+      .catch((error) => {
+        console.error("Error logging out:", error);
+      });
+  });
+
+  const testResultsBtn = document.getElementById("test-results");
   testResultsBtn.addEventListener("click", async () => {
     fetch("/get-history")
       .then((response) => {
@@ -44,23 +75,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function displayTestResults(results) {
-    const resultsContainer = document.createElement("div");
-    resultsContainer.className = "results-container";
-
+    const testResultElement = document.getElementById("test-history");
+    testResultElement.innerHTML = `
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Test Type</th>
+            <th scope="col">Test Score</th>
+            <th scope="col">Severity</th>
+            <th scope="col">Time Taken</th>
+          </tr>
+        </thead>
+        <tbody id="test-entries"></tbody>
+      </table>
+    `;
+    const testEntriesElement = document.getElementById("test-entries");
     results.forEach((result) => {
-      const resultElement = document.createElement("div");
-      resultElement.className = "result-item";
-      resultElement.innerHTML = `
-                <p><strong>User:</strong> ${result.user}</p>
-                <p><strong>Test Type:</strong> ${result.testType}</p>
-                <p><strong>Test Score:</strong> ${result.testScore}</p>
-                <p><strong>Severity:</strong> ${result.severity}</p>
-                <p><strong>Time:</strong> ${result.time}</p>
-            `;
-      resultsContainer.appendChild(resultElement);
+      testEntriesElement.innerHTML += `
+        <tr>
+          <td>${result.testType}</th>
+          <td>${result.testScore}</td>
+          <td>${result.severity}</td>
+          <td>@${result.time}</td>
+        </tr>
+      `;
     });
-
-    const dashboardContainer = document.querySelector(".dashboard-container");
-    dashboardContainer.appendChild(resultsContainer);
   }
 });

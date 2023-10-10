@@ -40,6 +40,7 @@ function loadHomepage() {
   contactInfo.innerHTML = `
         <h3>Contact the Authors</h3>
         <p>email: hu.yuqi@northeastern.edu</p>
+        <p>email: zhang.zhiqi@northeastern.edu</p>
     `;
 }
 

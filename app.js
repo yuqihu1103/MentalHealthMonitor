@@ -3,8 +3,8 @@ const { connectToDatabase } = require("./db/db");
 const bodyParser = require("body-parser");
 const path = require("path");
 const registerRoute = require("./routes/register");
-const testRoute = require("./routes/test");
 const loginRoute = require("./routes/login");
+const testRoute = require("./routes/test");
 
 const app = express();
 
@@ -17,10 +17,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Use the registration route
 app.post("/register", registerRoute);
-app.post("/test", testRoute);
 app.post("/login", loginRoute);
 
 // Your other routes and middleware go here
+app.post("/test", testRoute);
 
 // Start your server
 const PORT = process.env.PORT || 3000;

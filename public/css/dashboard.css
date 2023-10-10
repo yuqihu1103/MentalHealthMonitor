@@ -1,15 +1,11 @@
-/* Importing the same font families from the homepage for consistency */
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fuggles&family=Permanent+Marker&display=swap");
-
 body {
-  font-family: "Caveat", cursive; /* Using the Caveat font to match homepage */
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
 }
 
 .dashboard-container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 50px auto;
   background: #fff;
   padding: 20px;
@@ -18,10 +14,9 @@ body {
   text-align: center;
 }
 
-h2 {
+h1 {
   margin-top: 0;
   color: #333;
-  font-family: "Permanent Marker", cursive; /* Using the Permanent Marker font for headers */
 }
 
 .button-container {

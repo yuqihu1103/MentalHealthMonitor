@@ -27,3 +27,8 @@ form {
     color: red;
     font-size: 0.9em;
 }
+
+#login-message {
+    font-size: xx-large;
+    color: green;
+}

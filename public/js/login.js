@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   credentialField.addEventListener("blur", validateAllFields);
   passwordField.addEventListener("blur", validateAllFields);
 
-  registrationForm.addEventListener("submit", async function (event) {
+  loginForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
     const isValid = validateAllFields();
@@ -33,10 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
               password: passwordField.value,
             }),
           });
-  
+          
           if (response.ok) {
             clearError(errorContainer);
-            // Registration was successful, show a message before redirecting
             const message = "Log in successful. Redirecting to your dashboard.";
             const messageElement = document.getElementById(
               "login-message"

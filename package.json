@@ -17,5 +17,22 @@
     "start": "node app.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
-  }
+  },
+  "name": "mental-health-monitor",
+  "description": "**Authors:** [Yuqi Hu](https://yuqihu1103.github.io/) and [Zhiqian Zhang](https://zhiqian-zhang.github.io/ZhiqianZhang-Peronal-Website/)",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuqihu1103/MentalHealthMonitor.git"
+  },
+  "author": "Yuqi Hu & Zhiqian Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuqihu1103/MentalHealthMonitor/issues"
+  },
+  "homepage": "https://github.com/yuqihu1103/MentalHealthMonitor#readme"
 }

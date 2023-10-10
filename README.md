@@ -1,5 +1,6 @@
 # Mental Health Monitor
-**Authors:** [Yuqi Hu](https://yuqihu1103.github.io/) and 
+
+**Authors:** [Yuqi Hu](https://yuqihu1103.github.io/) and [Zhiqian Zhang](https://zhiqian-zhang.github.io/ZhiqianZhang-Peronal-Website/)
 
 **Class:** [CS5610 at Northeastern](https://johnguerra.co/classes/webDevelopment_fall_2023/)
 
@@ -12,6 +13,7 @@ The primary goal of the Mental Health Monitor is to provide users with a handy t
 ## Instructions to Build and Use
 
 ## Project Demo and Presentation
+
 **Project Demo Video**
 
 **Project Presentation and Slides**
@@ -19,10 +21,13 @@ The primary goal of the Mental Health Monitor is to provide users with a handy t
 **Overview(gif)**
 
 ## Project Design
+
 Design documents can be found in the [docs](docs) folder, including:
+
 1. [Project Description](docs/project_description.txt)
 2. [User Personas and User Stories](docs/user_personas_and_stories.txt)
-3. [Design Mockup]()  overview:
+3. [Design Mockup]() overview:
 
 ## Others
+
 **License:** This project is licensed under the MIT License - see the [LICENSE](LICENSE) for details.

@@ -14,6 +14,7 @@
     "prettier": "^3.0.3"
   },
   "scripts": {
+    "start": "node app.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }

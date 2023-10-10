@@ -102,7 +102,29 @@ document.getElementById("depression").addEventListener("click", () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(testData),
-    });
+    })
+      .then((response) => {
+        if (!response.ok) {
+          // Handle any errors that occurred during the fetch
+          throw new Error("Network response was not ok");
+        }
+        return response.json(); // If you need to extract data from the response
+      })
+      .then((data) => {
+        // Handle the response data if necessary
+        console.log(data);
+
+        //Redirect to the dashboard page after a short delay
+        setTimeout(function () {
+          window.location.href = "dashboard.html";
+        }, 2000);
+      })
+      .catch((error) => {
+        console.log(
+          "There was a problem with the fetch operation:",
+          error.message
+        );
+      });
   });
 });
 
@@ -168,7 +190,29 @@ document.getElementById("anxiety").addEventListener("click", () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(testData),
-    });
+    })
+      .then((response) => {
+        if (!response.ok) {
+          // Handle any errors that occurred during the fetch
+          throw new Error("Network response was not ok");
+        }
+        return response.json(); // If you need to extract data from the response
+      })
+      .then((data) => {
+        // Handle the response data if necessary
+        console.log(data);
+
+        //Redirect to the dashboard page after a short delay
+        setTimeout(function () {
+          window.location.href = "dashboard.html";
+        }, 2000);
+      })
+      .catch((error) => {
+        console.log(
+          "There was a problem with the fetch operation:",
+          error.message
+        );
+      });
   });
 });
 

@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const takeTestBtn = document.getElementById("take-test");
+  const testHistoryBtn = document.getElementById("test-results");
+  const logOutButton = document.getElementById("log-out");
+
   //get username of current logged-in user
   fetch("/get-username", {
     method: "GET",
@@ -25,14 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const messageDiv = document.getElementById("logout-message");
       messageDiv.innerHTML = "You are not logged in.";
 
-      // Redirect to ../index.html after a short delay
       //disable buttons and links
+      takeTestBtn.classList.add("disabled");
+      testHistoryBtn.classList.add("disabled");
+      logOutButton.classList.add("disabled");
+
+      // Redirect to ../index.html after a short delay
       setTimeout(() => {
         window.location.href = "../index.html";
       }, 2000); // 2000 milliseconds (2 seconds) delay
     });
 
-  const logOutButton = document.getElementById("log-out");
   logOutButton.addEventListener("click", () => {
     // Make an HTTP request to the server's /logout route
     fetch("/logout", {

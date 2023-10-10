@@ -31,22 +31,6 @@ h2 {
   align-items: center;
 }
 
-.dashboard-btn {
-  display: block;
-  width: 80%;
-  padding: 15px;
-  margin: 10px 0;
-  color: #fff;
-  background-color: #007bff;
-  text-align: center;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  font-family: "Arial", sans-serif; /* Changing the font to Arial for better readability */
-  font-size: 16px; /* This can be adjusted based on your preference */
-}
-
 .dashboard-btn:hover {
   background-color: #0056b3;
 }

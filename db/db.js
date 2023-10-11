@@ -1,6 +1,12 @@
 import { MongoClient } from "mongodb";
 
-const uri = "mongodb+srv://cluster0.pbxgpyn.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority";
+let uri;
+try{
+  uri = process.env.MONGODB_URI;
+} catch {
+  uri = "mongodb://127.0.0.1:27017";
+}
+
 const dbName = "MentalHealthMonitor";
 const client = new MongoClient(uri);
 
@@ -19,7 +25,10 @@ function getDatabase() {
   return database;
 }
 
-export { connectToDatabase, getDatabase };
+export {
+  connectToDatabase,
+  getDatabase,
+};
 
 // connectToDatabase();
 // Replace the uri string with your connection string.

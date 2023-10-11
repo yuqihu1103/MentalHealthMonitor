@@ -61,7 +61,7 @@ Design documents can be found in the [docs](docs) folder, including:
 
 1. [Project Description](docs/project_description.txt)
 2. [User Personas and User Stories](docs/user_personas_and_stories.txt)
-3. [Design Mockup]() overview:
+3. [Design Mockup](docs/design_mockup)
 
 ## Others
 

@@ -55,13 +55,16 @@ To get started with this project, follow these steps:
     npm run dev
    ```
 
+
 ## Project Design
 
 Design documents can be found in the [docs](docs) folder, including:
 
 1. [Project Description](docs/project_description.txt)
 2. [User Personas and User Stories](docs/user_personas_and_stories.txt)
-3. [Design Mockup](docs/design_mockup.pdf)
+3. [Design Mockup](docs/design_mockup.pdf) overview:
+
+<img width="545" alt="Screenshot 2023-10-11 at 12 21 10 AM" src="https://github.com/yuqihu1103/MentalHealthMonitor/assets/133090163/9860d123-c4f3-4954-a72f-ec278d724be4">
 
 ## Others
 

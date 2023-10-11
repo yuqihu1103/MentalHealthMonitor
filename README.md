@@ -16,7 +16,9 @@ The primary goal of the Mental Health Monitor is to provide users with a handy t
 
 **Project Demo Video**
 
-**Project Presentation and Slides**
+**Project Presentation and Slides:**
+
+View slides in [Google Slides](https://docs.google.com/presentation/d/1tjcB73SOeI0JsZ0e89Tg-4oI0AkFY2Qx1-7gVoYRVIk/edit#slide=id.g28b3251b88c_0_90):
 
 **Overview(gif)**
 

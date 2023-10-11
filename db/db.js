@@ -1,9 +1,11 @@
 import { MongoClient } from "mongodb";
 
 let uri;
-try{
+// Check if process.env.MONGODB_URI is defined and use it, 
+//or use the local URI as a fallback
+if (process.env.MONGODB_URI) {
   uri = process.env.MONGODB_URI;
-} catch {
+} else {
   uri = "mongodb://127.0.0.1:27017";
 }
 

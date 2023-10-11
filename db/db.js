@@ -1,6 +1,14 @@
 import { MongoClient } from "mongodb";
 
-const uri = "mongodb://127.0.0.1:27017";
+let uri;
+// Check if process.env.MONGODB_URI is defined and use it, 
+//or use the local URI as a fallback
+if (process.env.MONGODB_URI) {
+  uri = process.env.MONGODB_URI;
+} else {
+  uri = "mongodb://127.0.0.1:27017";
+}
+
 const dbName = "MentalHealthMonitor";
 const client = new MongoClient(uri);
 
@@ -19,7 +27,10 @@ function getDatabase() {
   return database;
 }
 
-export { connectToDatabase, getDatabase };
+export {
+  connectToDatabase,
+  getDatabase,
+};
 
 // connectToDatabase();
 // Replace the uri string with your connection string.

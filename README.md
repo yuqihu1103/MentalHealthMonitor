@@ -47,11 +47,9 @@ To get started with this project, follow these steps:
 
 ## Project Demo and Presentation
 
-**Project Demo Video**
+**Project Demo Video:** 3-min Demo 
 
-**Project Presentation and Slides:**
-
-View slides in [Google Slides](https://docs.google.com/presentation/d/1tjcB73SOeI0JsZ0e89Tg-4oI0AkFY2Qx1-7gVoYRVIk/edit#slide=id.g28b3251b88c_0_90):
+**Project Presentation and Slides:** 2-min Presentation | [Slides](https://docs.google.com/presentation/d/1tjcB73SOeI0JsZ0e89Tg-4oI0AkFY2Qx1-7gVoYRVIk/edit#slide=id.g28b3251b88c_0_90):
 
 **Overview(gif)**
 

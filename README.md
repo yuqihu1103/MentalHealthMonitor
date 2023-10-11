@@ -28,6 +28,8 @@ View slides in [Google Slides](https://docs.google.com/presentation/d/1tjcB73SOe
 
 **Overview(gif)**
 
+![overview](https://github.com/yuqihu1103/MentalHealthMonitor/assets/133090163/b3440fab-8ced-46c7-bb60-ac54ec4f3ccf)
+
 ## Project Design
 
 Design documents can be found in the [docs](docs) folder, including:

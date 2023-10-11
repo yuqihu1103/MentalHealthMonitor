@@ -10,6 +10,16 @@
 
 The primary goal of the Mental Health Monitor is to provide users with a handy tool for assessing and monitoring their mental health (for example, anxiety and depression levels). It aims to offer a user-friendly and secure platform for individuals to gain insights into their mental well-being, track changes, and thus be able to make informed decisions about their mental health.
 
+## Project Demo and Presentation
+
+**Project Demo Video:** [3-min Demo](https://youtu.be/rEuJnAG9b5o)
+
+**Project Presentation and Slides:** 2-min Presentation | [Slides](https://docs.google.com/presentation/d/1tjcB73SOeI0JsZ0e89Tg-4oI0AkFY2Qx1-7gVoYRVIk/edit#slide=id.g28b3251b88c_0_90):
+
+**Overview(gif)**
+
+![overview](https://github.com/yuqihu1103/MentalHealthMonitor/assets/133090163/b3440fab-8ced-46c7-bb60-ac54ec4f3ccf)
+
 ## Instructions to Build and Use
 
 **Prerequisite:** Make sure you have Node.js installed on your system.
@@ -44,16 +54,6 @@ To get started with this project, follow these steps:
    ```
     npm run dev
     ```
-
-## Project Demo and Presentation
-
-**Project Demo Video:** 3-min Demo 
-
-**Project Presentation and Slides:** 2-min Presentation | [Slides](https://docs.google.com/presentation/d/1tjcB73SOeI0JsZ0e89Tg-4oI0AkFY2Qx1-7gVoYRVIk/edit#slide=id.g28b3251b88c_0_90):
-
-**Overview(gif)**
-
-![overview](https://github.com/yuqihu1103/MentalHealthMonitor/assets/133090163/b3440fab-8ced-46c7-bb60-ac54ec4f3ccf)
 
 ## Project Design
 

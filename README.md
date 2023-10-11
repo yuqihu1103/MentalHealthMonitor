@@ -4,7 +4,7 @@
 
 **Class:** [CS5610 at Northeastern](https://johnguerra.co/classes/webDevelopment_fall_2023/)
 
-**Delopyment:**
+**Delopyment (with Heroku + MongoDb Altas):** https://mental-health-assesser-monitor-a9aa3cd42fac.herokuapp.com/
 
 **Project Objectives:**
 

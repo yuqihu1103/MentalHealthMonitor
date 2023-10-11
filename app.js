@@ -1,12 +1,17 @@
-const express = require("express");
-const session = require("express-session");
-const { connectToDatabase } = require("./db/db");
-const bodyParser = require("body-parser");
-const path = require("path");
-const registerRoute = require("./routes/register");
-const loginRoute = require("./routes/login");
-const testRoute = require("./routes/test");
-const { getTestResultsByUsername } = require("./models/test_result");
+import express from "express";
+import session from "express-session";
+import { connectToDatabase } from "./db/db.js";
+import bodyParser from "body-parser";
+import path from "path";
+import registerRoute from "./routes/register.js";
+import loginRoute from "./routes/login.js";
+import testRoute from "./routes/test.js";
+import { getTestResultsByUsername } from "./models/test_result.js";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 
@@ -76,4 +81,4 @@ app.listen(PORT, () => {
 });
 
 connectToDatabase();
-module.exports = app;
+export default app;

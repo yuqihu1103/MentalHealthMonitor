@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 
 const uri = "mongodb://127.0.0.1:27017";
 const dbName = "MentalHealthMonitor";
@@ -19,10 +19,7 @@ function getDatabase() {
   return database;
 }
 
-module.exports = {
-  connectToDatabase,
-  getDatabase,
-};
+export { connectToDatabase, getDatabase };
 
 // connectToDatabase();
 // Replace the uri string with your connection string.

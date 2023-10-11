@@ -317,6 +317,7 @@ const phq_9 = `
     <button type="submit" class="submit-btn">Submit</button>
   </fieldset>
 </form>
+<p>You'll be automatically redirected to your dashboard.</p>
 `;
 
 const gad_7 = `
@@ -389,4 +390,5 @@ const gad_7 = `
       <button type="submit" class="submit-btn">Submit</button>
     </fieldset>
   </form>
+  <p>You'll be automatically redirected to your dashboard.</p>
 `;

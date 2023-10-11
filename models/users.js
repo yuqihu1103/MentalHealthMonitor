@@ -2,9 +2,9 @@
 Update, Delete) operations for managing user data in MongoDB. It also includes functions for 
 password hashing and password verification.*/
 
-const { ObjectId } = require("mongodb");
-const { getDatabase } = require("../db/db");
-const bcrypt = require("bcrypt");
+import { ObjectId } from "mongodb";
+import { getDatabase } from "../db/db.js";
+import bcrypt from "bcrypt";
 
 // Define the User schema
 //const userSchema = {
@@ -71,4 +71,4 @@ const UserModel = {
   },
 };
 
-module.exports = UserModel;
+export default UserModel;

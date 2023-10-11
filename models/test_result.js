@@ -1,4 +1,4 @@
-const { getDatabase } = require("../db/db.js");
+import { getDatabase } from "../db/db.js";
 
 async function createTestResult(data) {
   const db = getDatabase();
@@ -66,9 +66,10 @@ async function deleteTestResultById(testResultId) {
   }
 }
 
-module.exports = {
+export {
   createTestResult,
   getTestResultsByUsername,
   updateTestResultById,
   deleteTestResultById,
 };
+

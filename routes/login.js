@@ -1,6 +1,6 @@
 // Import required modules and User model
-const express = require("express");
-const UserModel = require("../models/users");
+import express from "express";
+import UserModel from "../models/users.js";
 
 // Create an Express router
 const router = express.Router();
@@ -36,4 +36,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

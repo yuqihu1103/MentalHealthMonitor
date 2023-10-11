@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const uri = "mongodb://127.0.0.1:27017";
+const uri = "mongodb://localhost:27017";
 const dbName = "MentalHealthMonitor";
 const client = new MongoClient(uri);
 

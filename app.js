@@ -54,6 +54,14 @@ app.get("/get-username", isAuthenticated, (req, res) => {
   }
 });
 
+app.get("/testdb", (req, res) => {
+  if (database) {
+    res.json({ message: "Database is connected" });
+  } else {
+    res.status(500).json({ error: "Database connection failed" });
+  }
+});
+
 //get-history route
 app.get("/get-history", isAuthenticated, async (req, res) => {
   const username = req.session.username;

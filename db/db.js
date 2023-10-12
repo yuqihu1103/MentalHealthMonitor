@@ -31,16 +31,3 @@ export {
   connectToDatabase,
   getDatabase,
 };
-
-// connectToDatabase();
-// Replace the uri string with your connection string.
-// // db.js// const { MongoClient } = require("mongodb");// const dbName = "MentalHealthMonitor";// const url = `mongodb://localhost:27017`;
-// const client = new MongoClient(url);// async function connectToDatabase() {
-//   try {
-//     console.log("Connecting to ", url);
-//     await client.connect();
-//     console.log("Connected to MongoDB");
-//   } catch (error) {
-//     console.error("Error connecting to MongoDB:", error);
-//   }
-// }

@@ -26,10 +26,6 @@ Key Features:
         Users can view a history of their past test results, including scores and test dates.
         The results history serves as a visual representation of the user's mental health progress.
 
-    Filtering and Insights:
-        Users can filter and sort their test results based on criteria such as test type and date.
-        Insights and trends may be provided to help users understand their mental health journey better.
-
     Client-Side Rendering:
         The frontend of the application is designed for client-side rendering using vanilla JavaScript.
         This ensures a responsive and interactive user interface without full page reloads.

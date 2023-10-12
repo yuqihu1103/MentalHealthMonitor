@@ -1,7 +1,7 @@
 // Import required modules and User model
 import express from "express";
 import UserModel from "../models/users.js";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 // Create an Express router
 const router = express.Router();

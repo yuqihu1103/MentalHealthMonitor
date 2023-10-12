@@ -4,7 +4,7 @@ password hashing and password verification.*/
 
 import { ObjectId } from "mongodb";
 import { getDatabase } from "../db/db.js";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 // Define the User schema
 //const userSchema = {
@@ -19,7 +19,7 @@ const UserModel = {
     const db = getDatabase();
 
     const newUser = {
-      ...user
+      ...user,
     };
 
     const result = await db.collection("users").insertOne(newUser);
